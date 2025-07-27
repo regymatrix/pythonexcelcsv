@@ -13,6 +13,10 @@ dados = dadosIniciais.ler_dados()
 df = pd.DataFrame(dados[:5])
 print(df)
 
+processador = ProcessadorDeRegra(RegraAtacado())
+resultado = processador.executar(dados)
+dfresultado = pd.DataFrame(resultado)
+print(dfresultado)
 
 # dados = [
 #     {"nome": "Cliente A", "tipo": "atacado"},
