@@ -3,19 +3,20 @@ from models import OverrideOrigem
 
 
 class ImportarDados:
-    def __init__(self, caminho: str, guia: str):
+    def __init__(self, caminho: str):
         self.caminho = caminho
-        self.guia = guia
+        self.guias_desejadas = ["agro", "atacado", "varejo"]
 
     def ler_dados(self) -> list:
-        planilhas = pd.read_excel(self.caminho, sheet_name=self.guia)
+        planilhas = pd.read_excel(self.caminho, sheet_name=self.guias_desejadas)
 
         # se o usuário passou apenas UMA guia (ex: 'atacado')
         if isinstance(planilhas, pd.DataFrame):
             df_geral = planilhas
         else:
             frames = [df for df in planilhas.values()]
-            df_geral = pd.concat(frames, ignore_index=True)
+        
+        df_geral = pd.concat(frames, ignore_index=True)
 
         registros = []
         for _, row in df_geral.iterrows():
