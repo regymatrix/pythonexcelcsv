@@ -10,11 +10,17 @@ class RegraAtacado(RegraStrategy):
 
 class RegraAgro(RegraStrategy):
     def aplicar(self, dados):
-        return [d for d in dados if d["tipo"] == "agro"]
+        for d in dados:
+            d["overriderating"] = "overaAGRO"
+            d["justificativa"] = "justAGRO"
+        return dados
 
 class RegraVarejo(RegraStrategy):
     def aplicar(self, dados):
-        return [d for d in dados if d["tipo"] == "varejo"]
+        for d in dados:
+            d["overriderating"] = "overVAREJO"
+            d["justificativa"] = "justVAREJO"
+        return dados
     
 
 

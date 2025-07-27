@@ -1,0 +1,10 @@
+carteira,valorcontabil,empresa,produto,overriderating,justificativa
+atacado,100,margi,mouse,overatacado,justatacado
+atacado,200,ecoville,mouse,overatacado,justatacado
+atacado,300,itau,mouse,overatacado,justatacado
+agro,500,senai,mouse,overaAGRO,justAGRO
+agro,200,sesi,teclado,overaAGRO,justAGRO
+agro,300,net,vassoura,overaAGRO,justAGRO
+varejo,100,margi,uva,overVAREJO,justVAREJO
+varejo,200,marata,laranha,overVAREJO,justVAREJO
+varejo,300,factual1,caneta,overVAREJO,justVAREJO
